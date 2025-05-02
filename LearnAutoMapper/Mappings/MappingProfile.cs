@@ -6,7 +6,7 @@ namespace LearnAutoMapper.Mappings
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() 
+        public MappingProfile()
         {
             //Map from Developer Object to DeveloperDTO Object
             //Compensation in DeveloperDTO is mapped from Salary in Developer
@@ -17,6 +17,8 @@ namespace LearnAutoMapper.Mappings
                 .ForMember(dest => dest.IsEmployed, source => source.MapFrom(source => source.Salary > 0 ? true : false))
                 //Reverse Mapping
                 .ReverseMap();
+
+            CreateMap<Address, AddressDTO>();
         }
     }
 }
