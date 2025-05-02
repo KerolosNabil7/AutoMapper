@@ -13,7 +13,9 @@ namespace LearnAutoMapper.Mappings
                 //Specific Mapping
                 .ForMember(dest => dest.Compensation, source => source.MapFrom(source => source.Salary))
                 //Conditional Mapping
-                .ForMember(dest => dest.IsEmployed, source => source.MapFrom(source => source.Salary > 0 ? true : false));
+                .ForMember(dest => dest.IsEmployed, source => source.MapFrom(source => source.Salary > 0 ? true : false))
+                //Reverse Mapping
+                .ReverseMap();
         }
     }
 }
