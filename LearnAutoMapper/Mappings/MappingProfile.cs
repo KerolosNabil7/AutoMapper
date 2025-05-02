@@ -10,7 +10,10 @@ namespace LearnAutoMapper.Mappings
             //Map from Developer Object to DeveloperDTO Object
             //Compensation in DeveloperDTO is mapped from Salary in Developer
             CreateMap<Developer, DeveloperDTO>()
-                .ForMember(dest => dest.Compensation, source => source.MapFrom(source => source.Salary));
+                //Specific Mapping
+                .ForMember(dest => dest.Compensation, source => source.MapFrom(source => source.Salary))
+                //Conditional Mapping
+                .ForMember(dest => dest.IsEmployed, source => source.MapFrom(source => source.Salary > 0 ? true : false));
         }
     }
 }

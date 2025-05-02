@@ -8,5 +8,7 @@
         public decimal Experience { get; set; }
 
         public decimal Compensation { get; set; }
+        public bool IsEmployed { get; set; }
+
     }
 }
