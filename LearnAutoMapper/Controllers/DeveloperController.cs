@@ -14,7 +14,7 @@ namespace LearnAutoMapper.Controllers
         {
             _mapper = mapper;
         }
-
+        [HttpPost]
         public async Task<IActionResult> Post(Developer developer)
         {
             var developerDtoMapped = _mapper.Map<DeveloperDTO>(developer);
