@@ -9,6 +9,6 @@
 
         public decimal Compensation { get; set; }
         public bool IsEmployed { get; set; }
-
+        public AddressDTO Address { get; set; }
     }
 }
