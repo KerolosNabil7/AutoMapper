@@ -8,5 +8,6 @@
         public decimal Experience { get; set; }
 
         public decimal Salary { get; set; }
+        public Address Address { get; set; }
     }
 }
