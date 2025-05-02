@@ -8,7 +8,9 @@ namespace LearnAutoMapper.Mappings
         public MappingProfile() 
         {
             //Map from Developer Object to DeveloperDTO Object
-            CreateMap<Developer, DeveloperDTO>();
+            //Compensation in DeveloperDTO is mapped from Salary in Developer
+            CreateMap<Developer, DeveloperDTO>()
+                .ForMember(dest => dest.Compensation, source => source.MapFrom(source => source.Salary));
         }
     }
 }
