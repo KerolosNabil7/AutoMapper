@@ -1,4 +1,4 @@
-﻿namespace LearnAutoMapper.Models
+﻿namespace LearnAutoMapper.DTO
 {
     public class DeveloperDTO
     {

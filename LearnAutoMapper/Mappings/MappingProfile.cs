@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LearnAutoMapper.DTO;
 using LearnAutoMapper.Models;
 
 namespace LearnAutoMapper.Mappings
